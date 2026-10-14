@@ -1,0 +1,341 @@
+/* General */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  color: #2d2f42;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background: transparent;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Button {
+  background-color: #2d2f42;
+  color: white;
+  padding: 0.625rem 1.25rem;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+}
+
+.Button:hover {
+  background-color: #777a97;
+  transition-duration: 0.4s;
+}
+
+.Button a {
+  color: rgb(229, 223, 253);
+  text-decoration: none;
+  font-size: clamp(0.875rem, 3vw, 1rem);
+}
+
+input {
+  padding: 0.5rem 0.625rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+
+  height: 2.2rem;
+  margin: 0.625rem 0;
+
+
+  font: inherit;
+}
+
+.formFields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(90vw, 20rem);
+  margin-inline: auto;
+}
+
+h1, h2{
+  font-weight: 600;
+}
+
+main {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-image: url('https://plus.unsplash.com/premium_photo-1789668167441-8128f226f9e5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D');
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+/* Home page */
+
+.homeContainer {
+  width: min(100%, 32rem);
+  min-height: 60vh;
+  min-height: 60dvh;
+  height: fit-content;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  margin-block: clamp(2rem,20dvh, 7rem);
+  border: 2px solid rgba(204, 204, 204, 0.3);
+  border-radius: 0.625rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.tasker {
+  margin-top: 0.625rem;
+  font-size: clamp(1.5rem, 4vw, 1.875rem);
+}
+
+.taskerLogo {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+
+.head {
+  text-align: center;
+}
+
+.head h1 {
+  font-size: clamp(1.5rem, 5vw, 2.25rem);
+}
+
+.enterButtons {
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.875rem;
+}
+
+
+
+/* Signup/login pages */
+.authContainer {
+  width: min(100%, 26rem);
+  min-height: 70vh;
+  min-height: 70dvh;
+  height: fit-content;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  margin-block: clamp(1rem,7.5dvh, 3.5rem);
+  border: 2px solid rgba(204, 204, 204, 0.3);
+  border-radius: 0.625rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+}
+.backButton {
+  align-self: flex-start;
+  padding: 0.625rem 1.25rem;
+  margin-top: 1.25rem;
+  margin-left: 1rem;
+}
+
+form {
+  margin-top: clamp(2rem, 2vh, 6rem);
+}
+
+form h1 {
+  text-align: center;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+form p{
+  text-align: center;
+  font-size: clamp(0.875rem, 3vw, 1rem);
+}
+
+.form input,
+.formFields input {
+  width: 100%;
+}
+
+
+
+/* Task List Form */
+.skeleton {
+  background: #e5e5e5;
+  border-radius: 6px;
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.tl-container {
+  width: min(100%);
+  min-height: 100vh;
+  min-height: 100dvh;
+  height: fit-content;
+  justify-content: left;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  border: 2px solid rgba(204, 204, 204, 0.3);
+  border-radius: 0.625rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  background-size: cover;
+  gap: 3rem;     
+}
+
+.tl-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.line{
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  margin: 1rem 0;
+  border-radius: 1px;
+}
+
+.tl-form-container{
+  width: 20rem;
+  align-items: center;
+}
+
+.tl-mid{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tl-header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.tl-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.tl-delete {
+  background: #c0392b;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.tl-delete:hover {
+  background-color: #e74c3c;
+  transition-duration: 0.4s;
+}
+
+.tl-error {
+  color: #c0392b;
+  margin: 0.5rem 0;
+}
+
+.tl-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tl-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tl-checkbox {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+  accent-color: #2d2f42;
+}
+
+.tl-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow-wrap: anywhere;
+  text-align: left;
+}
+
+.tl-title {
+  font-weight: 600;
+}
+
+.tl-details {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.tl-done {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.tl-tasks{
+  width: 60rem;
+  height: 84vh;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 0.625rem;
+  padding-inline: 2.5vw;
+  padding-block: 2vh;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgba(96, 94, 106, 0.3);
+}
+
+
+
+
+
+/* Small screens */
+@media (max-width: 480px) {
+  .tl-form {
+    flex-wrap: wrap;
+  }
+
+  .tl-form input {
+    flex-basis: 100%;
+  }
+}
